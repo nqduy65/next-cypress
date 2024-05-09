@@ -24,7 +24,7 @@ export default function Home() {
         <p className="text-white text-lg"> A simple authneticatn </p>
         <div>
           <LoginButton>
-            <Button variant="secondary" size="lg">
+            <Button className="sign-in" variant="secondary" size="lg">
               Sign in
             </Button>
           </LoginButton>

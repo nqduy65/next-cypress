@@ -47,6 +47,7 @@ export default function LoginForm() {
   });
   return (
     <CardWrapper
+      nameBackButton="sign-up"
       headerLabel="Welcome Back"
       backButtonLabel="Don't have an account"
       backButtonHref="/auth/register"
@@ -98,7 +99,7 @@ export default function LoginForm() {
             disabled={isPending}
             className="flex w-full items-center justify-center"
           >
-            Login
+            Sign in
           </Button>
         </form>
       </Form>

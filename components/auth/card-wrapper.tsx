@@ -9,8 +9,11 @@ import {
 import Header from "@/components/auth/header";
 import Social from "@/components/auth/social";
 import BackButton from "@/components/auth/back-button";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface CardWrapperProps {
+  nameBackButton: string;
   children: React.ReactNode;
   headerLabel: string;
   backButtonLabel: string;
@@ -19,6 +22,7 @@ interface CardWrapperProps {
 }
 
 export default function CardWrapper({
+  nameBackButton,
   children,
   headerLabel,
   backButtonLabel,
@@ -37,7 +41,14 @@ export default function CardWrapper({
         </CardFooter>
       )}
       <CardFooter>
-        <BackButton label={backButtonLabel} href={backButtonHref}></BackButton>
+        <Button
+          variant="link"
+          className={nameBackButton + " back-button font-normal w-full"}
+          size="sm"
+          asChild
+        >
+          <Link href={backButtonHref}>{backButtonLabel}</Link>
+        </Button>
       </CardFooter>
     </Card>
   );
