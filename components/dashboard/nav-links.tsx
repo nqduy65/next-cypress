@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { clsx } from "clsx";
-import { auth } from "@/auth";
+// import { auth } from "@/auth";
+// import { useSession } from "next-auth/react";
 
 // Map of links to display in the side navigation.
 // Depending on the size of the application, this would be stored in a database.
